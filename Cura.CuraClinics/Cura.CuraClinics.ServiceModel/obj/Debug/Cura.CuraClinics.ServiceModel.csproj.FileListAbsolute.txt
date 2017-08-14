@@ -5,3 +5,17 @@ C:\Users\M\Documents\Visual Studio 2017\Projects\Cura.CuraClinics\Cura.CuraClini
 C:\Users\M\Documents\Visual Studio 2017\Projects\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.dll
 C:\Users\M\Documents\Visual Studio 2017\Projects\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.pdb
 C:\Users\M\Documents\Visual Studio 2017\Projects\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.csprojResolveAssemblyReference.cache
+C:\Users\M\Desktop\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\Cura.CuraClinics.ServiceModel.dll
+C:\Users\M\Desktop\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\Cura.CuraClinics.ServiceModel.pdb
+C:\Users\M\Desktop\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\M\Desktop\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\M\Desktop\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.csprojResolveAssemblyReference.cache
+C:\Users\M\Desktop\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.dll
+C:\Users\M\Desktop\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.pdb
+C:\Users\M\Desktop\HolyFolder\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\Cura.CuraClinics.ServiceModel.dll
+C:\Users\M\Desktop\HolyFolder\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\Cura.CuraClinics.ServiceModel.pdb
+C:\Users\M\Desktop\HolyFolder\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\M\Desktop\HolyFolder\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\M\Desktop\HolyFolder\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.dll
+C:\Users\M\Desktop\HolyFolder\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.pdb
+C:\Users\M\Desktop\HolyFolder\Cura.CuraClinics\Cura.CuraClinics\Cura.CuraClinics.ServiceModel\obj\Debug\Cura.CuraClinics.ServiceModel.csprojResolveAssemblyReference.cache

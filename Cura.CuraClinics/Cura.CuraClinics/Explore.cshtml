@@ -1,0 +1,84 @@
+﻿@inherits ViewPage
+@{
+    ViewBag.Title = "Clinic Explorer";
+}
+<style>
+    table, th, td {
+        padding: 15px;
+        border: 1px solid #0066ff;
+    }
+    .button {
+        background-color: #0066ff;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    .list {
+        background-color: white;
+        border: none;
+        color: darkslategray;
+        padding: 15px 32px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+
+</style>
+
+
+<div>
+    <header>
+        <div>
+            <button id="Home" class="button" onclick="myfunction()">Home</button>
+
+        </div>
+    </header>
+</div>
+
+
+
+<p id="FirstClinic" style="margin-top: 15px;font-size: large"></p>
+<p id="demo"></p>
+
+<script >
+  
+        var g = $.getJSON("http://localhost:1234/clinic/", function (data) {
+         
+           
+            $.ajax({
+                dataType: 'json'
+            });
+            for (var i = 0; i < data.length; i++){
+
+                $('#Clist').append('<li >' + '<b><a href="http://localhost:1234/clinic/' + data[i].Id + '">' + data[i].Name + '</a></b>' + '</li >' + '  Open Time:   ' + data[i].OpeningTime + '<br /> ' + data[i].Description + '<br /> ' + '  Reviews  ' + data[i].Reviews + '<br />');
+                $('#Clist').append('<br />' );
+
+            }
+          
+
+
+
+        });
+
+    $('#Home').click(function () {
+        window.location.replace("default.cshtml");
+    });
+  
+
+   
+</script>
+
+<table>
+    <tr class="list" id="Clist">
+        List of Clinics
+
+    </tr>
+</table>
+
+<h4 style="position: absolute; bottom: -200px; width: 100%; text-align: center">
+</h4>

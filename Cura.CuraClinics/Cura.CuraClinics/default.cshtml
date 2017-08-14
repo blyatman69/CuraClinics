@@ -1,38 +1,137 @@
 ﻿@inherits ViewPage
 @{
-    ViewBag.Title = "List all Clinics";
+    ViewBag.Title = "CuraClinics Services";
 }
+<style>
+    table, th, td {
+        padding: 15px;
+        border: 1px solid #0066ff;
+    }
+    .button {
+        background-color: #0066ff;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+
+
 <div>
     <div>
-        <input class="form-control input-lg" id="Name" type="text" placeholder="Type your name">
-        <p id="ClinicResult" style="margin-top: 15px;font-size: large"></p>
+        <button id="Explore" class="button" onclick="myfunction()">Explore Clinics</button>
+        <button id="butt" class="button" onclick="myfunction()">Display Clinics data</button>
+        <button id="docbutt" class="button" onclick="myfunction()">Display Doctors data</button>
+        <button id="Reports" class="button" onclick="myfunction()">Display Reports</button>
     </div>
-    
 </div>
-<script>
-    $('#Name').keyup(function () {
-        var name = $('#Name').val();
-        if (name) {
-            $.getJSON('/Clinic/' + name)
-                .success(function (response) {
-                    $('#ClinicResult').html(response.Result);
-                });
-        } else {
-            $('#ClinicResult').html('');
-        }
+
+
+<p id="FirstClinic" style="margin-top: 15px;font-size: large"></p>
+<p id="demo"></p>
+
+<script >
+    $('#Explore').click(function () {
+        window.location.replace("Explore.cshtml");
     });
-    $('#Clinic').keyup(function () {
-        var name = $('#Clinic').val();
-        if (name) {
-            $.getJSON('/Clinic/' + name)
-                .success(function (response) {
-                    $('#clincResult').html(response.Result);
-                });
-        } else {
-            $('#clincResult').html('');
-        }
+
+
+
+
+    $('#butt').click(function () {
+        var g = $.getJSON("http://localhost:1234/clinic/", function (data) {
+         
+           
+            $.ajax({
+                dataType: 'json'
+            });
+            for (var i = 0; i < data.length; i++){
+                $('#lol').append('<li></li>' + data[i].Name);
+            }
+           
+
+
+
+        });
+
+
     });
+
+    $('#docbutt').click(function () {
+
+       var jsondata =  $.getJSON("http://localhost:1234/doctor/", function (data) {
+           var tbl_body = "";
+           var odd_even = false;
+           $.each(data, function () {
+               var tbl_row = "";
+               $.each(this, function (k, v) {
+                   tbl_row += "<td>" + v + "</td>";
+               })
+               tbl_body += "<tr class=\"" + (odd_even ? "odd" : "even") + "\">" + tbl_row + "</tr>";
+               odd_even = !odd_even;
+           })
+           $("#lol").html(tbl_body);
+        });
+
+
+
+       $('#Reports').click(function () {
+
+
+           $.getJSON("http://localhost:1234/report/", function (data) {
+               var tbl_body = "";
+               var odd_even = false;
+               $.each(data, function () {
+                   var tbl_row = "";
+                   $.each(this, function (k, v) {
+                       tbl_row += "<td>" + v + "</td>";
+
+                   })
+                   tbl_body += "<tr class=\"" + (odd_even ? "odd" : "even") + "\">" + tbl_row + "</tr>";
+                   odd_even = !odd_even;
+               })
+               $("#lol").html(tbl_body);
+           });
+
+       });
+
+    });
+
+      
 </script>
+
+<table>
+    <tr id="lol">
+        Displayed data
+    </tr>
+</table>
+
 <h4 style="position: absolute; bottom: 20px; width: 100%; text-align: center">
-    <a href="https://servicestack.net/vs-templates/BootstrapWebApp">Learn about ASP.NET Bootstrap VS.NET templates</a>
+    <a href="https://servicestack.net/vs-templates/BootstrapWebApp">
+
+        $('#butt').click(function () {
+
+
+        $.getJSON("http://localhost:1234/clinic/", function (data) {
+        var tbl_body = "";
+        var odd_even = false;
+
+        $.each(data, function () {
+        var tbl_row = "";
+        $.each(this, function (k, v) {
+        tbl_row += "<td>" + v + "</td>";
+
+        })
+        tbl_body += "<tr class=\"" + (odd_even ? "odd" : "even" ) + "\">" + tbl_row + "</tr>";
+        odd_even = !odd_even;
+        })
+        $("#lol").html(tbl_body);
+        });
+
+        });
+
+    </a>
 </h4>

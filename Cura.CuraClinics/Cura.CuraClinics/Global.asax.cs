@@ -31,9 +31,19 @@ namespace Cura.CuraClinics
                 using (var db = container.Resolve<IDbConnectionFactory>().Open())
                 {
                     db.CreateTable<Clinic>(overwrite: false);
+                    db.CreateTable<Doctor>(overwrite: false);
+                    db.CreateTable<CS>(overwrite: false);
+                    db.CreateTable<Report>(overwrite: false);
+
+
+
                 }
+             this.Plugins.Add(new RazorFormat());
+
             }
         }
+
+
         protected void Application_Start(object sender, EventArgs e)
         {
             new ClinicAppHost().Init();

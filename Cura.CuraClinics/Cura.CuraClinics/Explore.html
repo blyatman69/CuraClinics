@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<script>
+
+    $('#butt').click(function () {
+        var g = $.getJSON("http://localhost:1234/clinic/", function (data) {
+
+
+            $.ajax({
+                dataType: 'json'
+            });
+            for (var i = 0; i < data.length; i++) {
+                $('#lol').append('<li></li>' + data[i].Name);
+            }
+
+
+
+
+        });
+
+
+    });
+
+
+
+
+</script>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cura Clinics Explore</title>
+</head>
+
+<body>
+    <button id="butt" onclick="myfunction()">Display Clinics data</button>
+
+    <table>
+        <tr id="lol">
+            Displayed data
+        </tr>
+    </table>
+</body>
+</html>
+
